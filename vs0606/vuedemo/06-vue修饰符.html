@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <form action="save" v-on:submit.prevent="onSubmitForm">
+            <input type="text" name="name" id="name" v-model:value="user.username">
+            <input type="text" name="age" id="age" v-model:value="user.age">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                user: {}
+            },
+            methods: {
+                onSubmitForm(){
+                    if(this.user.username){
+                        console.log('提交表单')
+                    } else {
+                        console.log('请输入信息')
+                    }
+                }   
+            }
+        })
+    </script>
+</body>
+
+</html>

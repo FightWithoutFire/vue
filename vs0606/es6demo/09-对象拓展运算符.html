@@ -1,0 +1,12 @@
+<script>
+    let person1 = {name: "ammy", age: 20}
+    let person2 = {...person1}
+    person2.name = "ammy2"
+    console.log(person2)
+    console.log(person1)
+    
+    let name = {name: "Mike"}
+    let age = {age: 20}
+    let p2 = {...age, ...name}
+    console.log(p2)
+</script>
